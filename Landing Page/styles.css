@@ -7,24 +7,26 @@ body {
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
   }
   
   header {
-    background-color: #24292e;
     color: #fff;
-    padding: 20px 0;
+
   }
   
   header h1 {
     margin: 0;
+    background-color: green;
     font-size: 24px;
+    padding: 5px;
   }
   
   nav ul {
+    background-color: green;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin:auto;
+    padding:5px;
   }
   
   nav ul li {
