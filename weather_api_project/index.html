@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Weather Predictor</h2>
+        <input type="text" id="location" placeholder="Enter location...">
+        <button onclick="getWeather()">Get Weather</button>
+        <div class="weather-result" id="weatherResult"></div>
+    </div>
+
+    <script>
+        function getWeather() {
+            const location = document.getElementById("location").value.trim();
+            if (!location) {
+                alert("Please enter a location");
+                return;
+            }
+
+            const apiUrl = `https://api.weatherapi.com/v1/current.json?key=1955e3e6196942f18d2192534252703&q=${location}&aqi=yes`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        document.getElementById("weatherResult").innerHTML = `<p style="color: red;">${data.error.message}</p>`;
+                    } else {
+                        document.getElementById("weatherResult").innerHTML = `
+                            <h3>${data.location.name}, ${data.location.country}</h3>
+                            <p>Temperature: ${data.current.temp_c}°C</p>
+                            <p>Weather: ${data.current.condition.text}</p>
+                            <p>Humidity: ${data.current.humidity}%</p>
+                            <p>Wind Speed: ${data.current.wind_kph} km/h</p>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById("weatherResult").innerHTML = `<p style="color: red;">Error fetching data</p>`;
+                });
+        }
+    </script>
+</body>
+</html>
