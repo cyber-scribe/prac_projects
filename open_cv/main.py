@@ -4,6 +4,8 @@ import cv2
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(0)
 
+#face detection
+
 while 1:
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
@@ -21,6 +23,8 @@ while 1:
 cap.release()
 cv2.destroyAllWindows()
 
+##single frame
+
 # x =1
 # while(True):
 #     ret, frame = cap.read()
@@ -35,6 +39,8 @@ cv2.destroyAllWindows()
 # cap.destroyAllWindows()
 
 
+##picture with text
+
 # cap = cv2.VideoCapture(0)
 # while(True):
 #     ret, frame = cap.read()
@@ -46,6 +52,7 @@ cv2.destroyAllWindows()
 # cap.release()
 # cap.destroyAllWindows()
 
+##shape on image
 
 # import numpy as np 
 # import cv2
