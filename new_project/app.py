@@ -6,6 +6,8 @@ import tensorflow as tf;
 # from tensorflow.keras.models import load_model;
 from flask import Flask, request, jsonify;
 
+
+
 def get_real_time_weather(city):
     API_KEY = "YOUR_OPENWEATHER_API_KEY"  # Replace with your actual API key
     URL = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
@@ -26,3 +28,11 @@ def get_real_time_weather(city):
     except Exception as e:
         print("Error fetching weather data:", e)
         return None
+    
+
+
+# Load Random Forest model for drought prediction
+rf_model = joblib.load("random_forest_drought.pkl")
+
+# Load LSTM model for heatwave prediction
+lstm_model = load_model("lstm_heatwave.h5")
