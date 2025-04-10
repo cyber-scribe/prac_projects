@@ -53,3 +53,21 @@ def predict_heatwave(city):
         temp_forecast = lstm_model.predict(lstm_input)[0][0]
         return f"🔥 Forecasted Temperature: {temp_forecast:.2f}°C (Possible Heatwave)" if temp_forecast > 40 else "✅ No Heatwave Risk"
     return "Error in fetching weather data"
+
+
+app = Flask(__name__)
+
+@app.route('/predict', methods=['GET'])
+def predict():
+    city = request.args.get('city', 'Los Angeles')
+    drought_result = predict_drought(city)
+    heatwave_result = predict_heatwave(city)
+
+    return jsonify({
+        "city": city,
+        "drought_prediction": drought_result,
+        "heatwave_prediction": heatwave_result
+    })
+
+if __name__ == '__main__':
+    app.run(debug=True)
