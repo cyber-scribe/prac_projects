@@ -48,6 +48,7 @@ def predict_drought(city):
 def predict_heatwave(city):
     real_time_data = get_real_time_weather(city)
     if real_time_data is not None:
+
         # Reshape input for LSTM
         lstm_input = real_time_data.reshape(1, real_time_data.shape[1], 1)
         temp_forecast = lstm_model.predict(lstm_input)[0][0]
@@ -68,6 +69,7 @@ def predict():
         "drought_prediction": drought_result,
         "heatwave_prediction": heatwave_result
     })
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
