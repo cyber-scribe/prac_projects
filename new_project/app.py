@@ -16,7 +16,6 @@ def get_real_time_weather(city):
         response = requests.get(URL)
         weather_data = response.json()
 
-        # Extract relevant weather features
         temperature = weather_data['main']['temp']
         humidity = weather_data['main']['humidity']
         precipitation = weather_data.get('rain', {}).get('1h', 0)  # Rainfall in last 1 hour
