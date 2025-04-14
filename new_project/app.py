@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify;
 
 
 def get_real_time_weather(city):
-    API_KEY = "YOUR_OPENWEATHER_API_KEY"  # Replace with your actual API key
+    API_KEY = "YOUR_OPENWEATHER_API_KEY" 
     URL = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 
     try:
@@ -18,7 +18,7 @@ def get_real_time_weather(city):
 
         temperature = weather_data['main']['temp']
         humidity = weather_data['main']['humidity']
-        precipitation = weather_data.get('rain', {}).get('1h', 0)  # Rainfall in last 1 hour
+        precipitation = weather_data.get('rain', {}).get('1h', 0)  
         wind_speed = weather_data['wind']['speed']
         pressure = weather_data['main']['pressure']
 
@@ -30,7 +30,6 @@ def get_real_time_weather(city):
     
 
 
-# Load Random Forest model for drought prediction
 rf_model = joblib.load("random_forest_drought.pkl")
 
 # Load LSTM model for heatwave prediction
