@@ -32,7 +32,6 @@ def get_real_time_weather(city):
 
 rf_model = joblib.load("random_forest_drought.pkl")
 
-# Load LSTM model for heatwave prediction
 lstm_model = load_model("lstm_heatwave.h5")
 
 
@@ -47,7 +46,6 @@ def predict_heatwave(city):
     real_time_data = get_real_time_weather(city)
     if real_time_data is not None:
 
-        # Reshape input for LSTM
         lstm_input = real_time_data.reshape(1, real_time_data.shape[1], 1)
         temp_forecast = lstm_model.predict(lstm_input)[0][0]
         return f"🔥 Forecasted Temperature: {temp_forecast:.2f}°C (Possible Heatwave)" if temp_forecast > 40 else "✅ No Heatwave Risk"
