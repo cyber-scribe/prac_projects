@@ -9,8 +9,8 @@ from flask import Flask, request, jsonify;
 
 
 def get_real_time_weather(city):
-    API_KEY = "YOUR_OPENWEATHER_API_KEY" 
-    URL = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+    API_KEY = "" 
+    # URL = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 
     try:
         response = requests.get(URL)
