@@ -1,10 +1,13 @@
 h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    color: rgb(64, 37, 4);
 }
 .container{
-    border: 2px solid ;
+    border: 2px solid beige;
     border-radius: 9px;
+    box-shadow: 3px 3px rgb(211, 211, 178);
+    background-color: beige;
     padding: 25px;
     margin: 45px;
     height: 150px;
