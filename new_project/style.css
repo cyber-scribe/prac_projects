@@ -14,3 +14,9 @@ h1{
     width: fit-content;
     text-align: center;
 }
+button{
+    color: white;
+    background-color: rgb(66, 200, 66);
+    border: 1px solid rgb(66, 200, 66);
+    border-radius: 3px;
+}
