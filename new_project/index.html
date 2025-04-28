@@ -17,5 +17,28 @@
         <div class="results" id="results"></div>
     </div>
     </div>
+
+    <script>
+        document.getElementById('weatherForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const city = document.getElementById('city').value;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '⏳ Fetching predictions...';
+
+            try {
+                // const response = await fetch(`/predict?city=${city}`);
+                // const data = await response.json();
+
+                resultsDiv.innerHTML = `
+                    <p><strong>City:</strong> ${data.city}</p>
+                    <p><strong>Drought Prediction:</strong> ${data.drought_prediction}</p>
+                    <p><strong>Heatwave Forecast:</strong> ${data.heatwave_prediction}</p>
+                `;
+            } catch (err) {
+                resultsDiv.innerHTML = '⚠️ Error fetching prediction. Try again.';
+                console.error(err);
+            }
+        });
+    </script>
 </body>
 </html>
