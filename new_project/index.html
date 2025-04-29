@@ -26,8 +26,8 @@
             resultsDiv.innerHTML = '⏳ Fetching predictions...';
 
             try {
-                // const response = await fetch(`/predict?city=${city}`);
-                // const data = await response.json();
+                const response = await fetch(`/predict?city=${city}`);
+                const data = await response.json();
 
                 resultsDiv.innerHTML = `
                     <p><strong>City:</strong> ${data.city}</p>
