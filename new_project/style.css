@@ -27,6 +27,9 @@ button{
     font-weight: bold;
     
 }
+button:hover{
+    background-color: rgb(27, 218, 27);
+}
 input{
     border: 2px  solid black;
     border-radius: 5px;
