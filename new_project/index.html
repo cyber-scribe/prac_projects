@@ -19,8 +19,8 @@
     </div>
 
     <script>
-        document.getElementById('weatherForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
+        document.getElementById('weatherForm').addEventListener('submit');
+        {    
             const city = document.getElementById('city').value;
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '⏳ Fetching predictions...';
@@ -38,7 +38,7 @@
                 resultsDiv.innerHTML = '⚠️ Error fetching prediction. Try again.';
                 console.error(err);
             }
-        });
+        };
     </script>
 </body>
 </html>
