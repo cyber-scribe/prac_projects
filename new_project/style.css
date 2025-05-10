@@ -7,6 +7,7 @@ h1{
     display: flex;
     justify-content: space-around;
     background-color: rgb(229, 223, 223);
+    height: 100vh;;
 }
 .container{
     border: 2px solid beige;
