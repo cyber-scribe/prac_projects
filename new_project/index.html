@@ -20,7 +20,7 @@
 
     <!-- <script>
         document.getElementById('weatherForm').addEventListener('submit', async(e))
-        {   
+        {   e.prevent();
             const city = document.getElementById('city').value;
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '⏳ Fetching predictions...';
