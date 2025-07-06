@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Analyzer</h1>
+    <form method="POST">
+      <input type="password" name="password" placeholder="Enter your password" required>
+      <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+      <p><strong>Score:</strong> {{ result.score }} / 4</p>
+      <p><strong>Crack Time:</strong> {{ result.crack_time }}</p>
+      <p><strong>Feedback:</strong> {{ result.feedback.suggestions | join(', ') or 'Looks good!' }}</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
