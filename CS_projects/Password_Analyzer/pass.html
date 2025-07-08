@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Password Analyzer</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='pass.css') }}">
+  <link rel="stylesheet" href="pass.css">
 </head>
 <body>
   <div class="container">
@@ -12,14 +12,12 @@
       <input type="password" name="password" placeholder="Enter your password" required>
       <button type="submit">Analyze</button>
     </form>
-
-    {% if result %}
     <div class="result">
-      <p><strong>Score:</strong> {{ result.score }} / 4</p>
-      <p><strong>Crack Time:</strong> {{ result.crack_time }}</p>
-      <p><strong>Feedback:</strong> {{ result.feedback.suggestions | join(', ') or 'Looks good!' }}</p>
+      <p><strong>Score:</strong> <span id="score"></span></p>
+      <p><strong>Crack Time:</strong> <span id="time"></span></p>
+      <p><strong>Feedback:</strong><span id="fdbck"></span> </p>
     </div>
-    {% endif %}
+    <!-- {{ result.feedback.suggestions | join(', ') or 'Looks good!' }} -->
   </div>
 </body>
 </html>
