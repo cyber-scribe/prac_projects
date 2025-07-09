@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Password Analyzer</title>
   <link rel="stylesheet" href="pass.css">
-</head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script></head>
 <body>
   <div class="container">
     <h1>Password Analyzer</h1>
@@ -13,9 +13,9 @@
       <button type="submit">Analyze</button>
     </form>
     <div class="result">
-      <p><strong>Score:</strong> <span id="score"></span></p>
-      <p><strong>Crack Time:</strong> <span id="time"></span></p>
-      <p><strong>Feedback:</strong><span id="fdbck"></span> </p>
+      <p> <span id="score"></span></p>
+      <!-- <p><strong>Crack Time:</strong> <span id="time"></span></p> -->
+      <p><span id="fdbck"></span> </p>
     </div>
     <!-- {{ result.feedback.suggestions | join(', ') or 'Looks good!' }} -->
   </div>
