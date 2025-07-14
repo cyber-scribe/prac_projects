@@ -6,5 +6,6 @@ passwordInput.addEventListener("input", () => {
   const pw = passwordInput.value;
   const result = zxcvbn(pw);
 
-  
+    const scoreLabels = ["Very Weak", "Weak", "Fair", "Good", "Strong"];
+  scoreDiv.textContent = `Score: ${scoreLabels[result.score]} (${result.score}/4)`;
 });
