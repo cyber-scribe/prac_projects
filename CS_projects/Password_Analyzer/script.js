@@ -6,6 +6,14 @@ passwordInput.addEventListener("input", () => {
   const pw = passwordInput.value;
   const result = zxcvbn(pw);
 
-    const scoreLabels = ["Very Weak", "Weak", "Fair", "Good", "Strong"];
-  scoreDiv.textContent = `Score: ${scoreLabels[result.score]} (${result.score}/4)`;
+  const scoreLabels = ["Very Weak", "Weak", "Fair", "Good", "Strong"];
+  scoreDiv.textContent = `Score: ${scoreLabels[result.score]} (${
+    result.score
+  }/4)`;
+
+  let feedback = result.feedback.suggestions.length
+    ? result.feedback.suggestions.join(" ")
+    : "Nice! Your password is solid 💪";
+  
+  feedbackDiv.textContent = `Feedback: ${feedback}`;
 });
