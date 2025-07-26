@@ -1,2 +1,4 @@
 
-### ML courses' material
+### Projects for learning
+
+
