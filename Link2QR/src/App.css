@@ -18,7 +18,7 @@
   border: 0.5px solid rgb(98, 165, 223);
   background-color: rgb(140, 181, 217);
   border-radius: 15px;
-  padding: 30px;
+  padding: 60px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -33,8 +33,8 @@
 .qr-code{
   border: 2px dashed white;
   border-radius: 8px;
-  width: 450px;
-  height: 400px;
+  width: 500px;
+  height: 450px;
   max-width: 90vw;
   max-height: 90vh;
   display: flex;

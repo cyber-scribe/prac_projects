@@ -4,7 +4,7 @@ This repository contains a collection of web development practice projects showc
 
 ## 📁 Projects Overview
 
-### 1. 🔗 Link2QR - QR Code Generator
+### 1. 🔗 Link2QR - QR Code Generator(https://link2qr.onrender.com/)
 **Location:** `Link2QR/`  
 **Technology:** React.js  
 **Description:** A modern React application that generates QR codes from URLs.
