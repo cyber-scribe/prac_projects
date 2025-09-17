@@ -1,0 +1,388 @@
+.App{
+  background-color: rgb(81, 141, 194);
+  min-height: 100vh;
+  padding: 10px;
+  color: rgb(12, 83, 150);
+}
+
+.main{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.app-container{
+  border: 0.5px solid rgb(98, 165, 223);
+  background-color: rgb(140, 181, 217);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 10px 8px 15px 2px rgb(98, 165, 223);
+  width: 400px;
+  height: 350px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.qr-code{
+  border: 2px dashed white;
+  border-radius: 8px;
+  width: 450px;
+  height: 400px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(154, 191, 223, 0.3);
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+  background-size: 20px 20px;
+  transition: all 0.3s ease;
+}
+
+.qr-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 100%;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.qr-code-image {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-text {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1,p{
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin: 20px 0 5px 0;
+  font-size: 2.2em;
+}
+
+p {
+  margin: 0 0 20px 0;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.input-label{
+  margin: 5px;
+  font-weight: bolder;
+}
+
+.field{
+  align-self: center;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  min-width: 80%;
+  color: rgb(4, 17, 35);
+}
+
+.size-field {
+  min-width: 80px;
+  max-width: 100px;
+  width: 80px;
+}
+
+.field:focus {
+  outline: none;
+  border: 2px solid rgb(12, 83, 150);
+  box-shadow: 0 0 8px rgba(12, 83, 150, 0.3);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+.field:hover {
+  border: 1px solid rgb(12, 83, 150);
+  transition: all 0.2s ease;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+button{
+  margin: 8px;
+  border-radius: 6px;
+  background-color: rgb(12, 83, 150);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(88, 139, 185);
+  min-width: 120px;
+}
+
+button:hover {
+  background-color: rgb(20, 100, 180);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: rgb(100, 100, 100);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.clear-button {
+  background-color: #ff6b6b;
+  box-shadow: 5px 5px 10px rgba(255, 107, 107, 0.3);
+}
+
+.clear-button:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+}
+
+
+.error-message {
+  background-color: #dc5a65;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.success-message {
+  background-color: #45a4d4;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.success-message-qr {
+  background-color: #2e9dd5;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  animation: slideIn 0.3s ease-in-out;
+  margin: 5px 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.size-presets {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.preset-btn {
+  background-color: rgba(12, 83, 150, 0.1);
+  color: rgb(12, 83, 150);
+  border: 1px solid rgb(12, 83, 150);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0;
+  min-width: auto;
+  box-shadow: none;
+}
+
+.preset-btn:hover {
+  background-color: rgb(12, 83, 150);
+  color: white;
+  transform: none;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+  
+  .app-container {
+    width: 350px;
+    height: 320px;
+  }
+  
+  .qr-code {
+    width: 350px;
+    height: 350px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    margin: 15px 0 5px 0;
+  }
+  
+  p {
+    font-size: 1em;
+    margin: 0 0 15px 0;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  button {
+    width: 80%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    width: 280px;
+    height: 300px;
+    padding: 20px;
+  }
+  
+  .qr-code {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .field {
+    min-width: 90%;
+    font-size: medium;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+    margin: 10px 0 5px 0;
+  }
+  
+  p {
+    font-size: 0.9em;
+  }
+  
+  .placeholder-text {
+    font-size: 1em;
+  }
+  
+  .size-presets {
+    gap: 5px;
+  }
+  
+  .preset-btn {
+    padding: 4px 8px;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 320px) {
+  .app-container {
+    width: 250px;
+    height: 280px;
+    padding: 15px;
+  }
+  
+  .qr-code {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .App {
+    padding: 5px;
+  }
+  
+  h1 {
+    font-size: 1.3em;
+  }
+  
+  p {
+    font-size: 0.8em;
+  }
+  
+  .inputs {
+    gap: 10px;
+  }
+}
