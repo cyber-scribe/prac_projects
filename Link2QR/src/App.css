@@ -293,8 +293,8 @@ button:disabled {
   }
   
   .qr-code {
-    width: 350px;
-    height: 350px;
+    width: 455px;
+    height: 400px;
   }
   
   h1 {
@@ -321,12 +321,12 @@ button:disabled {
 @media (max-width: 480px) {
   .app-container {
     width: 280px;
-    height: 300px;
+    height: 365px;
     padding: 20px;
   }
   
   .qr-code {
-    width: 280px;
+    width: 300px;
     height: 280px;
   }
   
@@ -361,7 +361,7 @@ button:disabled {
 @media (max-width: 320px) {
   .app-container {
     width: 250px;
-    height: 280px;
+    height: 355px;
     padding: 15px;
   }
   
