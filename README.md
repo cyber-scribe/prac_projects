@@ -4,7 +4,7 @@ This repository contains a collection of web development practice projects showc
 
 ## 📁 Projects Overview
 
-### 1. 🔗 [Link2QR - QR Code Generator](https://link2qr.onrender.com/)
+### 1. 🔗 [Link2QR - QR Code Generator](https://link2qr-qzej.onrender.com/)
 **Location:** `Link2QR/`  
 **Technology:** React.js  
 **Description:** A modern React application that generates QR codes from URLs.
@@ -23,7 +23,7 @@ npm install
 npm start
 ```
 
-### 2. 🔐 [Password Analyzer](https://pass-o-meter.onrender.com)
+### 2. 🔐 [Password Analyzer](https://pass-o-meter-a22o.onrender.com)
 **Location:** `Password_Analyzer/`  
 **Technology:** HTML, CSS, JavaScript (with zxcvbn library)  
 **Description:** A client-side password strength analyzer that evaluates password security.
@@ -38,7 +38,7 @@ npm start
 **How to Run:**
 Simply open `pass.html` in your web browser.
 
-### 3. 🌡️ [Temperature Converter](https://temp-calc.onrender.com)
+### 3. 🌡️ [Temperature Converter](https://temp-calc-m1vm.onrender.com)
 **Location:** `Temp converter/`  
 **Technology:** HTML, CSS, JavaScript  
 **Description:** A simple temperature conversion tool with an elegant interface.
@@ -52,7 +52,7 @@ Simply open `pass.html` in your web browser.
 **How to Run:**
 Simply open `index.html` in your web browser.
 
-### 4. 🌤️ [Weather API Project](https://weather-fetch-rrnc.onrender.com)
+### 4. 🌤️ [Weather API Project](https://weather-fetch-9g05.onrender.com)
 **Location:** `weather_api_project/`  
 **Technology:** HTML, CSS, JavaScript (with WeatherAPI integration)  
 **Description:** A weather application that fetches real-time weather data for any location.
